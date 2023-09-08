@@ -1,0 +1,55 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #262626;
+    --fondo-header: #332222;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo);
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 20px 0;
+    background-color: var(--fondo-header);
+}
+
+header .contenedor{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+header .header-titulo{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header .contenedor .texto-nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #aaa;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: white;
+}
+
+main iframe{
+    height: 100vh;
+}
