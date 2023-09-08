@@ -1,0 +1,161 @@
+body {
+    background-color: rgba(38, 38, 38, 1);
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.titulo {
+    font-family: 'Bold 700 Italic', serif;
+    font-size: 2em;
+    color: rgba(128, 9, 9, 1);
+}
+
+.carrusel-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto; 
+}
+
+.carrusel-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    width: 100%; 
+}
+
+.carrusel {
+    width: 20%; 
+    max-width: 210px; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    transition: transform .5s ease-in-out;
+}
+
+.carrusel a img {
+    object-fit: cover;
+    width: 100%; 
+    height: auto; 
+}
+
+.carrusel.active {
+    transform: scale(1.1);
+}
+
+.carrusel-prev,
+.carrusel-next {
+    font-size: 2em;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.carrusel-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carrusel-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* header parte del menu */
+
+.Navbar-center {
+    display: flex;
+    align-items: center;
+}
+
+.Navbar {
+    background-color: rgba(51, 34, 34, 1);
+    display: flex;
+    width: 100%;
+    padding: 1em 0; 
+    align-items: center;
+}
+
+.Navbar-titulo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 28rem;
+    margin-left: 2rem;
+}
+
+.Navbar-subtitulo {
+    color: #fff;
+    font-size: 1.2em;
+    margin-right: 3rem;
+}
+
+/*VISTAS EN PANTALLAS PEQUEÑAS */
+
+@media screen and (max-width: 768px) {
+    .carrusel {
+        width: 100%; 
+        max-width: none; 
+        margin: 0 auto;
+    }
+
+    .carrusel a img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Navbar-titulo {
+        margin-right: 1rem;
+        margin-left: 1rem; 
+    }
+
+    .Navbar-subtitulo {
+        font-size: 1em; 
+        margin-right: 1rem;
+    }
+}
+
+/*ICONOS*/
+
+.material-symbols-outlined {
+    color: #fff;
+    margin-right: .8rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+

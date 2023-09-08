@@ -3,13 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bold 700 Italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Peliculas IDS</title>
 </head>
 
 <body>
-    <div>
-        
-    </div>
+    <header>
+        <div class="Navbar-center">
+                <div class="Navbar">
+
+                    <a class="Navbar-titulo">
+                        MOVIES IDS
+                    </a>
+                    <a class="Navbar-subtitulo"> Peliculas  </a>
+                    <a class="Navbar-subtitulo"> Series  </a>
+                    <a class="Navbar-subtitulo"> Populares </a>
+                    <a class="Navbar-subtitulo"> Mas recientes  </a>
+                    <a class="Navbar-subtitulo"> Generos  </a>
+
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                    </span>
+                </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="center">
+            <h2 class="titulo"> POPULAR</h2>
+
+            <div class="carrusel-list">
+                <button class="carrusel-arrow carrusel-prev" id="button-prev"><</button>
+
+                <div class="carrusel-track" id="track">
+                    <div class="carrusel" id="imagen1">
+                        <a href="/">
+                            <img src="img/jeepers creepers.jpg" alt="imagen">
+                        </a>
+                    </div>
+                
+                    <div class="carrusel" id="imagen2">
+                        <a href="/">
+                            <img src="img/hereditary.jpg" alt="imagen">
+                        </a>
+                    </div>
+                
+                    <div class="carrusel" id="imagen3">
+                        <a href="/">
+                            <img src="img/Viernes13.jpg" alt="imagen">
+                        </a>
+                    </div>
+                
+                    <div class="carrusel" id="imagen4">
+                        <a href="/">
+                            <img src="img/Midsommar.jpg" alt="imagen">
+                        </a>
+                    </div>
+                
+                    <div class="carrusel" id="imagen5">
+                        <a href="/">
+                            <img src="img/mama.jpg" alt="imagen">
+                        </a>
+                    </div>
+                </div>
+
+                <button class="carrusel-arrow carrusel-next" id="button-next">></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
