@@ -1,12 +1,23 @@
 body {
     background-color: rgba(38, 38, 38, 1);
-    margin: 0;
+    margin: 0 auto; 
+    overflow-x: hidden;
 }
 
 main {
     position: relative;
-    top: -700px;
-    z-index: 1;
+    overflow-x: hidden;
+    width:100%;
+    margin: 0 auto; 
+    top: -720px;
+    z-index: 3;
+    padding: 2em;
+}
+
+header{
+    z-index: 2;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* header parte del menu */
@@ -42,30 +53,27 @@ main {
 
 /*VISTAS EN PANTALLAS PEQUEÑAS */
 
-@media screen and (max-width: 768px) {
-    .carrusel {
-        width: 100%; 
-        max-width: none; 
-        margin: 0 auto;
-    }
+@media screen and (max-width: 1190px) and (min-width: 768px) {
 
-    .carrusel a img {
-        width: 100%;
-        height: auto;
-    }
+ main{
+    overflow-x: hidden;
+    width:100%;
 }
 
-@media screen and (max-width: 768px) {
     .Navbar-titulo {
-        margin-right: 1rem;
-        margin-left: 1rem; 
+        font-size: 20px; 
     }
 
-    .Navbar-subtitulo {
-        font-size: 1em; 
-        margin-right: 1rem;
+    .Desc-justify{
+        overflow-x: hidden;
+        width:100%;
+    }
+
+    .title-desc {
+        margin-right: 0;
     }
 }
+
 
 /*ICONOS*/
 
@@ -136,13 +144,25 @@ header nav a {
 header iframe{
     height: 115vh;
 }
+.video {
+    pointer-events: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -2.5rem;
+    z-index: -1;
+}
+
+  .video:hover {
+    pointer-events: auto;
+  }
+
+  /* DATOS, ICONOS Y DESCRIPCION DEL VIDEO*/
 
 .Desc-justify{
-top: 500em;
 margin-top: 1rem;
-margin-left: 3rem;
-width: 35rem;
 text-align: justify;
+width: 40rem;
 }
 
 
@@ -204,3 +224,4 @@ margin-left: 12rem;
     border-radius: 50px;
     text-align:center;
 }
+

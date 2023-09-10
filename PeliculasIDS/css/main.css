@@ -1,17 +1,20 @@
 body {
     background-color: rgba(38, 38, 38, 1);
-    margin: 0;
+    margin: 0 auto; 
+    overflow-x: hidden;
 }
 
 main {
     position: relative;
-    top: -250px;
-    z-index: 1;
+    top: -360px;
+    z-index: 3;
 }
 
 header {
     position: relative;
-    z-index: 0; 
+    z-index: 2;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .center {
@@ -46,6 +49,9 @@ header {
 }
 
 .carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 19%;
     padding: 1.2%;
     max-width: 210px; 
@@ -87,6 +93,40 @@ header {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.container {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: -15em;
+    box-shadow: 0 0 10px rgb(233, 18, 18); /* Añade la sombra al contenedor */
+}
+
+.rank-diseño {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15em;
+}
+
+.rank-diseño.rank-diseño1 {
+    background-color: rgb(189, 224, 59);
+}
+
+.rank-diseño.rank-diseño2 {
+    background-color: rgb(165, 170, 189);
+}
+
+.rank-diseño.rank-diseño3 {
+    background-color: rgb(145, 96, 77);
 }
 
 /* header parte del menu */
@@ -200,6 +240,19 @@ header nav a {
 header iframe{
     height: 115vh;
 }
+.video {
+    pointer-events: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -2.5rem;
+    z-index: -1;
+}
+
+  .video:hover {
+    pointer-events: auto;
+  }
+
 
 /*ABAJO DEL CARRUSEL*/
 
