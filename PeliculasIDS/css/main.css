@@ -32,6 +32,7 @@ header {
     align-items: center;
     width: fit-content;
     margin: 0 auto; 
+
 }
 
 .carrusel-track {
@@ -40,12 +41,13 @@ header {
     left: 0;
     display: flex;
     justify-content: center;
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     width: 100%; 
 }
 
 .carrusel {
-    width: 20%; 
+    width: 19%;
+    padding: 1.2%;
     max-width: 210px; 
     box-sizing: border-box;
     display: flex;
@@ -182,7 +184,7 @@ header {
   'opsz' 24
 }
 
-/* Tamaño del video*/
+/* Tamaño del video y hover*/
 
 header nav a {
     text-decoration: none;
@@ -240,16 +242,15 @@ margin-left: 3rem;
     }
 }
 
+.button-position{
+    margin-top: -2.5rem;
+    margin-left: 65rem;
+}
+
 .button{
-display: flex;
-position: absolute;
-z-index: 2;
-background-color:#421f1f;
-margin-top: -4rem;
-border-radius: 50em;
-color: #fff;
-width: 8em;
-height: 2em;
-right: 10rem;
-text-align: justify;
+    width: 8rem;
+    background-color:#332222;
+    color: #fff;
+    border-radius: 50px;
+    text-align:center;
 }

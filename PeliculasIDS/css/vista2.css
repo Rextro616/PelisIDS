@@ -1,0 +1,206 @@
+body {
+    background-color: rgba(38, 38, 38, 1);
+    margin: 0;
+}
+
+main {
+    position: relative;
+    top: -700px;
+    z-index: 1;
+}
+
+/* header parte del menu */
+
+.Navbar-center {
+:root {
+	--rojo: #E50914;
+	--fondo: #262626;
+    --fondo-header: #332222;
+}
+}
+
+.Navbar {
+    background-color: rgba(51, 34, 34, 1);
+    display: flex;
+    width: 100%;
+    padding: 1em 0; 
+    align-items: center;
+}
+
+.Navbar-titulo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 24rem;
+}
+
+.Navbar-subtitulo {
+    color: #fff;
+    font-size: 1.2em;
+    margin-right: 3rem;
+}
+
+/*VISTAS EN PANTALLAS PEQUEÑAS */
+
+@media screen and (max-width: 768px) {
+    .carrusel {
+        width: 100%; 
+        max-width: none; 
+        margin: 0 auto;
+    }
+
+    .carrusel a img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Navbar-titulo {
+        margin-right: 1rem;
+        margin-left: 1rem; 
+    }
+
+    .Navbar-subtitulo {
+        font-size: 1em; 
+        margin-right: 1rem;
+    }
+}
+
+/*ICONOS*/
+
+.material-symbols-outlined {
+    color: #fff;
+    margin-right: .8rem;
+    margin-left: .8rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Tamaño del video y hover*/
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.Navbar a:hover,
+.Navbar a.activo {
+    color: rgb(168, 34, 34);
+    
+}
+
+header iframe{
+    height: 115vh;
+}
+
+.Desc-justify{
+top: 500em;
+margin-top: 1rem;
+margin-left: 3rem;
+width: 35rem;
+text-align: justify;
+}
+
+
+.title-desc{
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 15rem;
+}
+
+.Descripcion{
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.Lanzamiento{
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.linea{
+    width: 9.4rem;
+    margin-left: .0rem;
+    margin-top: .2rem;
+    }
+
+.Ranking{
+margin-top: -2rem;
+margin-left: 12rem;
+}
+
+.Rank-position{
+    width: 8rem;
+    margin-top: -1.5rem;
+    margin-left: 2.5rem;
+    background-color: #f12f2f;
+    border-radius: 50px;
+    text-align:center;
+}
+
+.Rank-text{
+    font-size: 1em;
+    color:#262626;
+    font-weight: bold;
+}
+
+.Reproducir{
+    margin-top: 1.5rem;
+    margin-left: -1rem;
+}
+
+.Reproducir-position{
+    width: 8rem;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    background-color: #f0ecec7e;
+    border-radius: 50px;
+    text-align:center;
+}
