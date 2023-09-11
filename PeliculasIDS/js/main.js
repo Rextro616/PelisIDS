@@ -1,53 +1,32 @@
+const contendorRecientes = document.getElementsByClassName('carousel');
+
 async function getData() {
-	var peliculasData;
-
-	const res = await fetch('http://127.0.0.1:8080/pelicula/getPeliculasPorFecha')
-
-	peliculasData = await res.json();
-
-	console.log(peliculasData);
 
 	//LLenado de pelis en más recientes ;D
 
-	const contendorRecientes = document.getElementsByClassName('carousel');
+	const res = await fetch('http://127.0.0.1:8080/pelicula/getPeliculasPorFecha')
 
-	peliculasData.map((peliData => {
-		let cardPeli = document.createElement('div');
-		cardPeli.className = 'peliculas';
-		let cardPeliA = document.createElement('a');
-		cardPeliA.className = 'si';
-		cardPeliA.href = '#';
-		let cardPeliImg = document.createElement('img');
-		cardPeliImg.src = peliData.urlImagen;
+	var peliculasData1 = await res.json();
 
-		let cardPeli2 = document.createElement('div');
-		cardPeli2.className = 'peliculas-descripcion block-peli';
-		let cardPeliH = document.createElement('h2');
-		cardPeliH.textContent = peliData.nombre;
-		let cardPeliP = document.createElement('p');
-		cardPeliP.textContent = peliData.descripcion;
+	mapeado(peliculasData1, 0);
 
-		cardPeliA.appendChild(cardPeliImg);
-		cardPeli2.appendChild(cardPeliH);
-		cardPeli2.appendChild(cardPeliP);
-		cardPeliA.appendChild(cardPeli2);
-		cardPeli.appendChild(cardPeliA)
+	//Llenado de pelis 
 
-		contendorRecientes[0].appendChild(cardPeli);
+	const res2 = await fetch('http://127.0.0.1:8080/pelicula/getAllPeliculas/pelicula')
 
-		cardPeli.addEventListener('mouseenter', (e) => {
-			const elemento = e.currentTarget;
-	
-			setTimeout(() => {
-				peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-				elemento.classList.add('hover');
-				pelisInfo.forEach(peliInfo => peliInfo.classList.add('block-peli'))
-				elemento.querySelector('.si').querySelector('.peliculas-descripcion').classList.remove('block-peli');
-			}, 300);
-		});
+	var peliculasData2 = await res2.json();
 
-	}))
+	mapeado(peliculasData2, 1);
 
+	//Llenado de series
+
+	const res3 = await fetch('http://127.0.0.1:8080/pelicula/getAllPeliculas/serie')
+
+	var peliculasData3 = await res3.json();
+
+	mapeado(peliculasData3, 2);
+
+	//------------------------------------------------------------------
 
 	const peliculas = document.querySelectorAll('.peliculas');
 	const fila = document.querySelector('.contenedor-carousel');
@@ -72,6 +51,44 @@ async function getData() {
 	});
 }
 
+function mapeado(peliculasData, i){
+
+	peliculasData.map((peliData => {
+		let cardPeli = document.createElement('div');
+		cardPeli.className = 'peliculas';
+		let cardPeliA = document.createElement('a');
+		cardPeliA.className = 'si';
+		cardPeliA.href = peliData.urlPagina;
+		let cardPeliImg = document.createElement('img');
+		cardPeliImg.src = peliData.urlImagen;
+
+		let cardPeli2 = document.createElement('div');
+		cardPeli2.className = 'peliculas-descripcion block-peli';
+		let cardPeliH = document.createElement('h2');
+		cardPeliH.textContent = peliData.nombre;
+		let cardPeliP = document.createElement('p');
+		cardPeliP.textContent = peliData.descripcion;
+
+		cardPeliA.appendChild(cardPeliImg);
+		cardPeli2.appendChild(cardPeliH);
+		cardPeli2.appendChild(cardPeliP);
+		cardPeliA.appendChild(cardPeli2);
+		cardPeli.appendChild(cardPeliA)
+
+		contendorRecientes[i].appendChild(cardPeli);
+
+		cardPeli.addEventListener('mouseenter', (e) => {
+			const elemento = e.currentTarget;
+	
+			setTimeout(() => {
+				peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+				elemento.classList.add('hover');
+				pelisInfo.forEach(peliInfo => peliInfo.classList.add('block-peli'))
+				elemento.querySelector('.si').querySelector('.peliculas-descripcion').classList.remove('block-peli');
+			}, 300);
+		});
+	}))
+}
 
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
@@ -136,3 +153,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	showImagen();
 });
+
