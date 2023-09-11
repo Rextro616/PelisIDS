@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <div class="Navbar-center">
                 <div class="Navbar">
@@ -38,54 +38,59 @@
                     </span>
                 </div>
         </div>
-            <iframe class="video" width="100%" src="https://www.youtube.com/embed/sld2-fE_Wng?si=D-AJGHVzLQh-zryC&autoplay=1&controls=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="video" width="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
     </header>
 
-    <main>
+    <main class="main">
 
-        <div class="Desc-justify">
-            <span class="title-desc">
-                FIVE NIGHTS AT FREDDY´S
-            </span>
-        </div>
-
-        <div class="Desc-justify">
-            <a class="Descripcion">
-                Para entender la historia de Five Nights At Freddys hay que verlo como lo que realmente es ¿Terror? Sí, pero mas que nada... Ciencia Ficción. -Jota, 2022.
-                Five Nights at Freddy's es una franquicia de videojuegos de terror en la que los jugadores deberán ponerse en los zapatos de Mike Schmidt, un joven que asume el papel de guardia de seguridad nocturno en Freddy Fazbear's Pizza, un restaurante familiar ficticio, que utiliza animales animatrónicos de tamaño natural para las fiestas infantiles que organizan.
-            </a>
-        </div>
-
-        <div class="Desc-justify">
-            <span class="Lanzamiento">
-                Fecha de lanzamiento
-            </span>
-            <hr class="linea">
-               
-            <div class="Ranking">
-                <span  class="material-symbols-outlined">
-                    trophy
-                </span>
-                <div class="Rank-position">
-                    <a class="Rank-text">
-                        RANKING 1
-                    </a>
-                </div>
-              
-            </div>
-          <div class="Reproducir">
-            <span class="material-symbols-outlined">
-                play_circle
-                </span>
-                <div class="Reproducir-position">
-                    <a class="Rank-text">
-                        Reproducir
-                    </a>
-                </div>
-          </div>
     </main>
+    <div class="Comentarios">
+        <div class="comentarios-diseño">
+            Comentarios
+        </div>
+        <hr width="100%" color="#a5141b" size="5" />
+        <div class="cuentas">
+            <span class="material-symbols-outlined">
+                account_box
+                </span>
+                <textarea name="comentario" id="areaTexto" rows="4" cols="150" placeholder="Escribe tu comentario"></textarea>
 
-
+        </div>
+        <div class="cuentas">
+            <span class="material-symbols-outlined">
+                account_box
+                </span>
+            <div class="nombre-perfil">
+                Nombre
+                <div  class="text-perfil">
+                    Comentario innecesario pero necesario
+                </div>
+            </div>
+        </div>
+        <div class="cuentas">
+            <span class="material-symbols-outlined">
+                account_box
+                </span>
+            <div class="nombre-perfil">
+                Nombre
+                <div  class="text-perfil">
+                    Comentario innecesario pero necesario
+                </div>
+            </div>
+        </div>
+        <div class="cuentas">
+            <span class="material-symbols-outlined">
+                account_box
+                </span>
+            <div class="nombre-perfil">
+                Nombre
+                <div  class="text-perfil">
+                    Comentario innecesario pero necesario
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vista2.js"></script>
 </body>
 </html>

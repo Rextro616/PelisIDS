@@ -225,3 +225,37 @@ margin-left: 12rem;
     text-align:center;
 }
 
+.Comentarios{
+    background-color: #ffffff80;
+    width: 200%;
+    height: 100%;
+    border-radius: 50px;
+    text-align: justify;
+}
+
+.comentarios-diseño{
+    font-size: 2em;
+    color:#262626;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 12em;
+    padding: 2%;
+}
+
+.nombre-perfil{
+    font-size: 20px;
+    color:#262626;
+    font-weight: bold;
+}
+
+.cuentas{
+display: flex;
+margin-top: 1em;
+}
+
+.text-perfil{
+background-color: #fff;
+width: 339%;
+border-color: #262626;
+padding: 2%;
+}
